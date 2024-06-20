@@ -1,0 +1,221 @@
+body, h1, h2, p, ul, li, form, label, input, select {
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    box-sizing: border-box;
+    background-image: linear-gradient(to right bottom, #f5f5ff, #f2f2fc, #f0f0f9, #ededf7, #ebebf4, #eaeaf4, #e8e8f4, #e7e7f4, #e6e6f7, #e6e6fa, #e5e5fc, #e5e4ff);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", Arial, sans-serif;
+}
+
+
+header {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    background-image: radial-gradient(circle, #dbdbfa, #dde1fb, #e1e6fb,
+     #e5ebfa, #ebf0fa, #ecf1fa, #edf2fb, #eef3fb,
+      #eaf0fc, #e8edfe, #e6eaff, #e6e6ff);
+    margin: auto;
+    position: fixed;
+    overflow: hidden;
+}
+
+.header-heading {
+    display: flex;
+    justify-content: space-around;
+    color: #605dff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+  nav ul li {
+    display: inline-block;
+  }
+
+  nav ul li a {
+    padding: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", Arial, sans-serif;
+    text-transform:uppercase;
+    color: #605dff;
+    font-size: 20px;
+    font-weight:bold;
+    text-decoration: none;
+    display: block;
+  }
+
+  nav ul li a:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+    color:#4a516d;
+  }
+
+.web-container {
+    padding-top: 180px;
+    background-color: #e8edfa;
+    color: #406882;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.web-container > ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+    justify-content: center;
+}
+
+.web-container > ul > li {
+    background-color: #dbdbfa;
+    padding: 60px 10px;
+    text-align: center;
+    width: 100%;
+    border: 1px solid #406882;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: font-size 0.3s;
+}
+
+.web-container > ul > li:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+    color:#a462f7;
+    text-transform:uppercase;
+    cursor: pointer;
+}
+
+.web-container > ul > li > a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", Arial, sans-serif;
+    font-size: large;
+    font-style: normal;
+    overflow: hidden;
+    /*box-sizing: border-box;*/
+    width: 305px;
+}
+
+.main-container {
+    padding-top: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.web-container button {
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.web-container button:hover {
+    background-color: #0056b3;
+}
+
+.web-container form {
+    display: inline;
+}
+
+
+
+
+
+.anima {
+  color:#605dff;
+  opacity: 75%;
+  padding-left: 500px;
+  padding-top: 60px;
+  width: 100%;
+  height: 60px;
+  font-size: xx-large;
+  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: reveal 6000ms ease-in-out forwards 400ms, glow 5000ms linear infinite 4000ms;
+  animation-iteration-count: infinite;
+}
+
+@keyframes reveal {
+  80%{
+    letter-spacing: 8px;
+    opacity: 1;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+
+@keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #dff6fe;;
+  }
+}
+
+.form-container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input, button {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.category-container {
+    padding-top: 180px;
+    background-color: #e8edfa;
+    color: #406882;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

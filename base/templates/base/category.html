@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% block content %}
+<div >
+    <div>
+        <ul>
+        {% for category in categories %}
+        <li>
+            <h5><a href="{% url 'websites-by-category' category %}">{{category}}</a></h5>
+        </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

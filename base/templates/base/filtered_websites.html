@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="main-container">
+    <div class="web-container">
+        <ul>
+        {% for filteredWebsite in filteredWebsites %}
+        <li>
+            <h5><a href="{% url 'website' website.id %}">{{filteredWebsite.name}}</a></h5>
+        </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

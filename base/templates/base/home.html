@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="main-container">
+    <div class="anima">
+        <p>Surf the Web in 2 clicks &#8227;  Happy Surfing</p>
+    </div>
+    <div class="web-container">
+        <ul>
+        {% for website in websites %}
+        <li>
+            <h5>{{website.id}} {{website.name}} </h5>
+            <p>{{ website.description }}</p>
+            <a href="{{ website.url }}" target="_blank"><button>Go To</button></a>
+            <a href="{% url 'edit_website' website.id %}"><button>Edit</button></a>
+            <form action="{% url 'delete_website' website.id %}" method="post" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock content %}

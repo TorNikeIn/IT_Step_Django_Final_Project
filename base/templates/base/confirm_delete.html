@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Website</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete {{ website.name }}?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, delete</button>
+        <a href="{% url 'website_list_by_category' website.category.name %}"><button type="button">Cancel</button></a>
+    </form>
+</body>
+</html>

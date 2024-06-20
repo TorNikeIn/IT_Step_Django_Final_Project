@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Websites in {{ category.name }}</title>
+    <style>
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 2px 2px 6px #aaa;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .card a:hover {
+            color: #007BFF;
+        }
+
+        .card button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Websites in {{ category.name }}</h1>
+    <div class="card-container">
+        {% for website in websites %}
+            <div class="card">
+                <h2>{{ website.name }}</h2>
+                <p>{{ website.description }}</p>
+                <a href="{{ website.url }}" target="_blank"><button>Go To</button></a>
+                <a href="{% url 'edit_website' website.id %}"><button>Edit</button></a>
+                <form action="{% url 'delete_website' website.id %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

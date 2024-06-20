@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Categories</title>
+    <style>
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 2px 2px 6px #aaa;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .card a:hover {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <h1>Categories</h1>
+    <div class="card-container">
+        {% for category in categories %}
+            <div class="card">
+                <a href="{% url 'website_list_by_category' category.id %}">
+                    <h2>{{ category.name }}</h2>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
